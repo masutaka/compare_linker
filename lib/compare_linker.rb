@@ -9,14 +9,11 @@ require_relative "compare_linker/lockfile_comparator"
 require_relative "compare_linker/lockfile_fetcher"
 
 class CompareLinker
-  attr_reader :repo_full_name, :pr_number, :compare_links, :gem_dictionary
-  attr_accessor :formatter
+  attr_reader :repo_full_name, :pr_number, :compare_links
 
   def initialize(repo_full_name, pr_number)
     @repo_full_name = repo_full_name
     @pr_number = pr_number
-    @gem_dictionary = GemDictionary.new
-    @formatter = Formatter::Text.new
   end
 
   def make_compare_links
@@ -81,5 +78,13 @@ class CompareLinker
           Octokit::Client.new(access_token: ENV["OCTOKIT_ACCESS_TOKEN"])
         end
       end
+  end
+
+  def gem_dictionary
+    @gem_dictionary ||= GemDictionary.new
+  end
+
+  def formatter
+    @formatter ||= Formatter::Text.new
   end
 end
