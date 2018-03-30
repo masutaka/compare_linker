@@ -10,10 +10,12 @@ require_relative "compare_linker/lockfile_fetcher"
 
 class CompareLinker
   attr_reader :repo_full_name, :pr_number, :compare_links
+  attr_accessor :formatter
 
   def initialize(repo_full_name, pr_number)
     @repo_full_name = repo_full_name
     @pr_number = pr_number
+    @formatter = Formatter::Text.new
   end
 
   def make_compare_links
@@ -82,9 +84,5 @@ class CompareLinker
 
   def gem_dictionary
     @gem_dictionary ||= GemDictionary.new
-  end
-
-  def formatter
-    @formatter ||= Formatter::Text.new
   end
 end
