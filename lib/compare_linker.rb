@@ -71,15 +71,7 @@ class CompareLinker
   private
 
   def octokit
-    @octokit ||=
-      begin
-        if ENV["ENTERPRISE_OCTOKIT_ACCESS_TOKEN"] && ENV['ENTERPRISE_OCTOKIT_HOST']
-          Octokit::Client.new(access_token: ENV["ENTERPRISE_OCTOKIT_ACCESS_TOKEN"],
-                              api_endpoint: "https://#{ENV['ENTERPRISE_OCTOKIT_HOST']}/api/v3")
-        else
-          Octokit::Client.new(access_token: ENV["OCTOKIT_ACCESS_TOKEN"])
-        end
-      end
+    @octokit ||= Octokit::Client.new
   end
 
   def gem_dictionary

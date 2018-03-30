@@ -46,11 +46,11 @@ compare_linker.add_comment('masutaka/compare_linker', '17', comment)
 ```
 
 ### GitHub Enterprise
-In addition to OCTOKIT_ACCESS_TOKEN, set the following environment variables.
+
+Set the following environment variable.
 
 ```ruby
-ENV['ENTERPRISE_OCTOKIT_ACCESS_TOKEN'] = 'xxx'
-ENV['ENTERPRISE_OCTOKIT_HOST'] = 'www.example.com'
+ENV['OCTOKIT_API_ENDPOINT'] = 'www.example.com'
 ```
 
 ## Development
