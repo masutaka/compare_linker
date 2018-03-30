@@ -45,6 +45,14 @@ comment = compare_linker.make_compare_links.to_a.join("\n")
 compare_linker.add_comment('masutaka/compare_linker', '17', comment)
 ```
 
+### GitHub Enterprise
+
+Set the following environment variable.
+
+```ruby
+ENV['OCTOKIT_API_ENDPOINT'] = 'www.example.com'
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

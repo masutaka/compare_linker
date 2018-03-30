@@ -9,14 +9,12 @@ require_relative "compare_linker/lockfile_comparator"
 require_relative "compare_linker/lockfile_fetcher"
 
 class CompareLinker
-  attr_reader :repo_full_name, :pr_number, :compare_links, :gem_dictionary
-  attr_accessor :formatter, :octokit
+  attr_reader :repo_full_name, :pr_number, :compare_links
+  attr_accessor :formatter
 
   def initialize(repo_full_name, pr_number)
     @repo_full_name = repo_full_name
     @pr_number = pr_number
-    @octokit ||= Octokit::Client.new(access_token: ENV["OCTOKIT_ACCESS_TOKEN"])
-    @gem_dictionary = GemDictionary.new
     @formatter = Formatter::Text.new
   end
 
@@ -67,6 +65,16 @@ class CompareLinker
       pr_number,
       compare_links
     )
-    "https://github.com/#{repo_full_name}/pull/#{pr_number}#issuecomment-#{res.id}"
+    res[:html_url]
+  end
+
+  private
+
+  def octokit
+    @octokit ||= Octokit::Client.new
+  end
+
+  def gem_dictionary
+    @gem_dictionary ||= GemDictionary.new
   end
 end
