@@ -12,6 +12,9 @@ p gem_info
 p @g
 p g
         @downgraded = downgrade?(g.old_ver, g.new_ver, g.old_tag, g.new_tag, g.old_rev, g.new_rev)
+p :eee
+p @downgraded
+p downgraded
         post_format
       end
 
