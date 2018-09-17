@@ -46,7 +46,11 @@ describe CompareLinker::Formatter::Markdown do
       context 'given owner && old_rev && new_rev' do
         # This spec may be unnecessary.
         let(:gem_info) { build(:g_downgrade__owner__old_rev__new_rev) }
-        it { is_expected.to eq '* [ ] [compare_linker](https://github.com/masutaka/compare_linker): [`1.1.2...1.1.1`](https://github.com/masutaka/compare_linker/compare/1.1.1...1.1.2) (downgrade)' }
+        it {
+p :ccc
+p gem_info
+          is_expected.to eq '* [ ] [compare_linker](https://github.com/masutaka/compare_linker): [`1.1.2...1.1.1`](https://github.com/masutaka/compare_linker/compare/1.1.1...1.1.2) (downgrade)'
+        }
       end
 
       context 'given homepage_uri && old_tag && new_tag' do
