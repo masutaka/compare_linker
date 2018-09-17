@@ -143,6 +143,31 @@ FactoryGirl.define do
       end
     end
 
+    factory :g_invalid_version__old_rev__new_rev do
+      defaults = {
+        owner: 'sds',
+        gem_name: 'slim-lint',
+      }
+
+      factory :g_upgrade__invalid_version__old_rev__new_rev do
+        initialize_with do
+          defaults.merge(
+            old_rev: '111e56fa5f4f75c03ad4043023232f7e972100d8',
+            new_rev: 'dc24a0900a4bd29209b812e9119f5bc6eb3eb649'
+          )
+        end
+      end
+
+      factory :g_downgrade__invalid_version__old_rev__new_rev do
+        initialize_with do
+          defaults.merge(
+            old_rev: 'dc24a0900a4bd29209b812e9119f5bc6eb3eb649',
+            new_rev: '111e56fa5f4f75c03ad4043023232f7e972100d8'
+          )
+        end
+      end
+    end
+
     factory :g_else do
       defaults = {
         owner:        nil,
