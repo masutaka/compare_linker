@@ -7,6 +7,10 @@ class CompareLinker
 
       def format(gem_info)
         @g = OpenStruct.new(gem_info)
+p :ddd
+p gem_info
+p @g
+p g
         @downgraded = downgrade?(g.old_ver, g.new_ver, g.old_tag, g.new_tag, g.old_rev, g.new_rev)
         post_format
       end
