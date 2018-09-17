@@ -28,10 +28,10 @@ p downgraded
 p :bbb
 p new_ver
 p old_ver
-p Gem::Version.new(new_ver) < Gem::Version.new(old_ver)
-p (old_tag && new_tag && Gem::Version.new(to_ver(new_tag)) < Gem::Version.new(to_ver(old_tag)))
-p (old_rev && new_rev && Gem::Version.new(to_ver(new_rev)) < Gem::Version.new(to_ver(old_rev)))
-        Gem::Version.new(new_ver) < Gem::Version.new(old_ver) ||
+# p Gem::Version.new(new_ver) < Gem::Version.new(old_ver)
+# p (old_tag && new_tag && Gem::Version.new(to_ver(new_tag)) < Gem::Version.new(to_ver(old_tag)))
+# p (old_rev && new_rev && Gem::Version.new(to_ver(new_rev)) < Gem::Version.new(to_ver(old_rev)))
+        (old_ver && new_ver && Gem::Version.new(new_ver) < Gem::Version.new(old_ver)) ||
           (old_tag && new_tag && Gem::Version.new(to_ver(new_tag)) < Gem::Version.new(to_ver(old_tag))) ||
           (old_rev && new_rev && Gem::Version.new(to_ver(new_rev)) < Gem::Version.new(to_ver(old_rev)))
       rescue ArgumentError # Gem::Version raise ArgumentError if it is invalid as version
