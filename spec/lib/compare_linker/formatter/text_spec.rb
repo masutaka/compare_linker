@@ -31,6 +31,11 @@ describe CompareLinker::Formatter::Text do
         it { is_expected.to eq 'sfl: https://github.com/ujihisa/spawn-for-legacy 2.2...2.3' }
       end
 
+      context 'given invalid version' do
+        let(:gem_info) { build(:g_upgrade__invalid_version__old_rev__new_rev) }
+        it { is_expected.to eq 'slim-lint: https://github.com/sds/slim-lint/compare/111e56fa5f4f75c03ad4043023232f7e972100d8...dc24a0900a4bd29209b812e9119f5bc6eb3eb649' }
+      end
+
       context 'given else' do
         let(:gem_info) { build(:g_upgrade__else) }
         it { is_expected.to eq 'json (link not found): 1.8.1...1.8.2' }
@@ -64,6 +69,10 @@ describe CompareLinker::Formatter::Text do
         it { is_expected.to eq 'sfl: https://github.com/ujihisa/spawn-for-legacy 2.3...2.2 (downgrade)' }
       end
 
+      context 'given invalid version' do
+        let(:gem_info) { build(:g_downgrade__invalid_version__old_rev__new_rev) }
+        it { is_expected.to eq 'slim-lint: https://github.com/sds/slim-lint/compare/dc24a0900a4bd29209b812e9119f5bc6eb3eb649...111e56fa5f4f75c03ad4043023232f7e972100d8' }
+      end
       context 'given else' do
         let(:gem_info) { build(:g_downgrade__else) }
         it { is_expected.to eq 'json (link not found): 1.8.2...1.8.1 (downgrade)' }
