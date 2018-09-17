@@ -52,6 +52,8 @@ class CompareLinker
           ]
         end
 
+p :aaa
+p downgraded
         text += " (downgrade)" if downgraded
         text
       end
