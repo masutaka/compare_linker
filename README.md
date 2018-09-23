@@ -1,8 +1,8 @@
 # Compare Linker
 
-[![Travis Status](https://img.shields.io/travis/masutaka/compare_linker.svg?style=flat-square)][travisci]
+[![Travis Status](https://img.shields.io/travis/masutaka/compare_linker.svg?logo=travis&style=flat-square)][travisci]
 [![License](https://img.shields.io/github/license/masutaka/compare_linker.svg?style=flat-square)][license]
-[![Gem](https://img.shields.io/gem/v/compare_linker.svg?style=flat-square)][gem-link]
+[![Gem](https://img.shields.io/gem/v/compare_linker.svg?logo=ruby&style=flat-square)][gem-link]
 
 [travisci]: https://travis-ci.org/masutaka/compare_linker
 [license]: https://github.com/masutaka/compare_linker/blob/master/LICENSE.txt
