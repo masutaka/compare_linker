@@ -6,8 +6,8 @@ require 'compare_linker/version'
 Gem::Specification.new do |spec|
   spec.name          = "compare_linker"
   spec.version       = CompareLinker::VERSION
-  spec.authors       = ["Kensuke Nagae"]
-  spec.email         = ["kyanny@gmail.com"]
+  spec.authors       = ["Takashi Masuda", "Kensuke Nagae"]
+  spec.email         = ["masutaka.net@gmail.com", "kyanny@gmail.com"]
   spec.description   = %q{Create GitHub's compare view URLs for pull request from diff of Gemfile.lock}
   spec.summary       = %q{Create GitHub's compare view URLs for pull request}
   spec.homepage      = "https://github.com/masutaka/compare_linker"
