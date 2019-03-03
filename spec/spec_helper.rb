@@ -1,5 +1,5 @@
 require 'compare_linker'
-require 'factory_girl'
+require 'factory_bot'
 require 'rspec'
 
 Dir["#{__dir__}/support/**/*.rb"].each do |f|
@@ -7,10 +7,10 @@ Dir["#{__dir__}/support/**/*.rb"].each do |f|
 end
 
 RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
   config.include LoadFixtureHelper
 
   config.before(:suite) do
-    FactoryGirl.find_definitions
+    FactoryBot.find_definitions
   end
 end

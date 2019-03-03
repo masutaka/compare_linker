@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :gem_info, class: Hash do
     factory :g_owner__old_rev__new_rev do
       defaults = {
