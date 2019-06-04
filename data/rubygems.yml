@@ -10,8 +10,10 @@ activerecord: rails/rails
 activesupport: rails/rails
 capistrano: capistrano/capistrano
 coffee-script-source: jashkenas/coffeescript
+ffi: ffi/ffi
 mixlib-archive: chef/mixlib-archive
 mixlib-authentication: chef/mixlib-authentication
+mixlib-cli: chef/mixlib-cli
 mixlib-shellout: chef/mixlib-shellout
 railties: rails/rails
 redis-rack: redis-store/redis-rack
