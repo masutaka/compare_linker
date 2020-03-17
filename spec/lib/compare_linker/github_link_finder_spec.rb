@@ -32,6 +32,19 @@ describe CompareLinker::GithubLinkFinder do
       end
     end
 
+    context "if github url includes hash" do
+      before do
+        allow(HTTPClient).to receive(:get_content).and_return load_fixture("digest-crc.json")
+        allow(subject).to receive(:redirect_url).and_return "https://github.com/postmodern/digest-crc#readme"
+      end
+
+      it "extracts repo_owner and repo_name" do
+        subject.find("digest-crc")
+        expect(subject.repo_owner).to eq "postmodern"
+        expect(subject.repo_name).to eq "digest-crc"
+      end
+    end
+
     context "if gem not found on rubygems.org" do
       before do
         exception = HTTPClient::BadResponseError.new "unexpected response:..."
