@@ -22,7 +22,7 @@ class CompareLinker
       ].find { |uri| uri.to_s.match(/github\.com\//) }
 
       if github_url = redirect_url(github_url)
-        _, @repo_owner, @repo_name = github_url.match(%r!github\.com/([^/]+)/([^/]+)!).to_a
+        _, @repo_owner, @repo_name = github_url.match(%r!github\.com/([^/]+)/([^/#]+)!).to_a
       else
         @repo_owner, @repo_name  = gem_dictionary.lookup(gem_info["name"])
         @homepage_uri = gem_info["homepage_uri"]
