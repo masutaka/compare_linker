@@ -1,4 +1,5 @@
 require "bundler"
+require "base64"
 
 class CompareLinker
   class LockfileFetcher
