@@ -5,7 +5,7 @@
 [![Gem](https://img.shields.io/gem/v/compare_linker.svg?logo=ruby&style=flat-square)][gem-link]
 
 [travisci]: https://travis-ci.org/masutaka/compare_linker
-[license]: https://github.com/masutaka/compare_linker/blob/master/LICENSE.txt
+[license]: https://github.com/masutaka/compare_linker/blob/main/LICENSE.txt
 [gem-link]: http://badge.fury.io/rb/compare_linker
 
 ## Description
