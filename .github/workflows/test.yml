@@ -39,7 +39,6 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
-        cache-version: 1
     - name: Run rspec
       run: bundle exec rake spec
   pushover:
