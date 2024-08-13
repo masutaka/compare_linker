@@ -26,7 +26,7 @@ class CompareLinker
     private
 
     def rubygems
-      @rubygems ||= YAML.load(IO.read(file))
+      @rubygems ||= YAML.load(File.read(file))
     end
   end
 end
