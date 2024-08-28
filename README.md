@@ -2,12 +2,10 @@
 
 [![Test Status](https://img.shields.io/github/actions/workflow/status/masutaka/compare_linker/test.yml?branch=main&style=flat-square&logo=githubactions&label=Test)][test]
 [![CodeQL Status](https://img.shields.io/github/actions/workflow/status/masutaka/compare_linker/github-code-scanning%2Fcodeql?branch=main&style=flat-square&logo=githubactions&label=CodeQL)][codeql]
-[![GitHub License](https://img.shields.io/github/license/masutaka/compare_linker?style=flat-square&label=License)][license]
 [![Gem Version](https://img.shields.io/gem/v/compare_linker?style=flat-square&logo=rubygems&label=Gem)][gem]
 
 [test]: https://github.com/masutaka/compare_linker/actions/workflows/test.yml?query=branch%3Amain
 [codeql]: https://github.com/masutaka/compare_linker/actions/workflows/github-code-scanning/codeql?query=branch%3Amain
-[license]: https://github.com/masutaka/compare_linker/blob/main/LICENSE.txt
 [gem]: https://rubygems.org/gems/compare_linker
 
 ## Description
@@ -72,7 +70,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/masuta
 </a>
 
 *Made with [contrib.rocks](https://contrib.rocks).*
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
