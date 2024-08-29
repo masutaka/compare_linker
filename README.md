@@ -1,6 +1,7 @@
 # Compare Linker
 
-[![Test Status](https://img.shields.io/github/actions/workflow/status/masutaka/compare_linker/test.yml?branch=main&style=flat-square&logo=githubactions&label=Test)][test]
+[![Test Status](https://img.shields.io/github/actions/workflow/status/masutaka/compare_linker/test.yml?branch=main&style=flat-square&logo=githubactions&label=Test)][![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmasutaka%2Fcompare_linker.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmasutaka%2Fcompare_linker?ref=badge_shield)
+[test]
 [![CodeQL Status](https://img.shields.io/github/actions/workflow/status/masutaka/compare_linker/github-code-scanning%2Fcodeql?branch=main&style=flat-square&logo=githubactions&label=CodeQL)][codeql]
 [![Gem Version](https://img.shields.io/gem/v/compare_linker?style=flat-square&logo=rubygems&label=Gem)][gem]
 
@@ -70,3 +71,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/masuta
 </a>
 
 *Made with [contrib.rocks](https://contrib.rocks).*
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmasutaka%2Fcompare_linker.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmasutaka%2Fcompare_linker?ref=badge_large)
