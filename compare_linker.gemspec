@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "base64"
   spec.add_dependency "httpclient"
   spec.add_dependency "octokit"
+  spec.add_dependency "ostruct"
 
   spec.add_development_dependency "activesupport", ">= 5.0.0", "< 7.2.0" # temporary pinned. See https://github.com/masutaka/compare_linker/pull/50
   spec.add_development_dependency "bundler", ">= 1.3"
