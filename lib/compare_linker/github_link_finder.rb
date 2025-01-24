@@ -28,7 +28,7 @@ class CompareLinker
         @homepage_uri = gem_info["homepage_uri"]
       end
 
-    rescue HTTPClient::BadResponseError
+    rescue HTTPClient::BadResponseError, Socket::ResolutionError
       @homepage_uri = "https://rubygems.org/gems/#{gem_name}"
     end
 
