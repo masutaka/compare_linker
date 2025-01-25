@@ -18,6 +18,9 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  # [Workaround] Remove it httpclient containing https://github.com/nahi/httpclient/pull/455 when released (v2.8.3 higher).
+  spec.add_dependency "mutex_m" if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('3.3')
+
   spec.add_dependency "base64"
   spec.add_dependency "httpclient"
   spec.add_dependency "octokit"
