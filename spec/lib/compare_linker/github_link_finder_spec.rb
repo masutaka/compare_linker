@@ -71,7 +71,9 @@ describe CompareLinker::GithubLinkFinder do
 
     context "if homepage_uri cannot be resolved" do
       before do
-        exception = Socket::ResolutionError.new "getaddrinfo(3):..."
+        # Socket::ResolutionError is defined from ruby-3.3
+        error_class = defined?(Socket::ResolutionError) ? Socket::ResolutionError : SocketError
+        exception = error_class.new "getaddrinfo(3):..."
         allow(HTTPClient).to receive(:get_content).and_raise exception
       end
 
