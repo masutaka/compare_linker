@@ -28,7 +28,7 @@ class CompareLinker
         @homepage_uri = gem_info["homepage_uri"]
       end
 
-    rescue HTTPClient::BadResponseError
+    rescue HTTPClient::BadResponseError, resolution_error_class
       @homepage_uri = "https://rubygems.org/gems/#{gem_name}"
     end
 
@@ -59,6 +59,11 @@ class CompareLinker
       return location if location =~ /\Ahttp/
       # RFC2394 violation?
       "#{uri.scheme}://#{uri.host}#{location}"
+    end
+
+    def resolution_error_class
+      # Socket::ResolutionError is defined from ruby-3.3
+      defined?(Socket::ResolutionError) ? Socket::ResolutionError : SocketError
     end
   end
 end

@@ -68,5 +68,19 @@ describe CompareLinker::GithubLinkFinder do
         expect(subject.homepage_uri).to eq "http://jashkenas.github.com/coffee-script/"
       end
     end
+
+    context "if homepage_uri cannot be resolved" do
+      before do
+        # Socket::ResolutionError is defined from ruby-3.3
+        error_class = defined?(Socket::ResolutionError) ? Socket::ResolutionError : SocketError
+        exception = error_class.new "getaddrinfo(3):..."
+        allow(HTTPClient).to receive(:get_content).and_raise exception
+      end
+
+      it "extracts homepage_uri" do
+        subject.find("not_resolved")
+        expect(subject.homepage_uri).to eq "https://rubygems.org/gems/not_resolved"
+      end
+    end
   end
 end
