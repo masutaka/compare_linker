@@ -3,10 +3,12 @@
 [![Test Status](https://img.shields.io/github/actions/workflow/status/masutaka/compare_linker/test.yml?branch=main&style=flat-square&logo=githubactions&label=Test)][test]
 [![Gem Version](https://img.shields.io/gem/v/compare_linker?style=flat-square&logo=rubygems&label=Gem)][gem]
 [![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/masutaka/compare_linker)][coderabbit]
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)][deepwiki]
 
 [test]: https://github.com/masutaka/compare_linker/actions/workflows/test.yml?query=branch%3Amain
 [gem]: https://rubygems.org/gems/compare_linker
 [coderabbit]: https://www.coderabbit.ai/
+[deepwiki]: https://deepwiki.com/masutaka/compare_linker
 
 ## Description
 
