@@ -15,7 +15,7 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Run actionlint
         uses: reviewdog/action-actionlint@83e4ed25b168066ad8f62f5afbb29ebd8641d982 # v1.69.1
         with:
@@ -44,7 +44,7 @@ jobs:
           - "3.3"
           - "3.4"
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - uses: ruby/setup-ruby@ed55d55e820a01da7d3e4863a8c51a61d73c3228 # v1.274.0
         with:
           ruby-version: ${{ matrix.ruby-version }}
