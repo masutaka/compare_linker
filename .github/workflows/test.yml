@@ -12,12 +12,12 @@ jobs:
     permissions:
       contents: read
   codeql:
+    uses: masutaka/actions/.github/workflows/codeql.yml@main
     permissions:
       actions: read
       contents: read
       pull-requests: read
       security-events: write
-    uses: masutaka/actions/.github/workflows/codeql.yml@main
   rspec:
     runs-on: ubuntu-latest
     timeout-minutes: 5

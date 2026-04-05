@@ -9,11 +9,11 @@ jobs:
     strategy:
       matrix:
         language: [actions, ruby]
+    uses: masutaka/actions/.github/workflows/codeql_core.yml@main
     permissions:
       actions: read
       contents: read
       security-events: write
-    uses: masutaka/actions/.github/workflows/codeql_core.yml@main
     with:
       language: ${{ matrix.language }}
   pushover:
