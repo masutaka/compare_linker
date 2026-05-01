@@ -34,7 +34,7 @@ jobs:
           - "4.0"
     steps:
       - uses: actions/checkout@v6
-      - uses: ruby/setup-ruby@09a7688d3b55cf0e976497ff046b70949eeaccfd # v1.288.0
+      - uses: ruby/setup-ruby@0cb964fd540e0a24c900370abf38a33466142735 # v1.305.0
         with:
           ruby-version: ${{ matrix.ruby-version }}
           bundler-cache: true
